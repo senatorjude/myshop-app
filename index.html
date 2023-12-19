@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="dexie.min.js"></script>
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('./sw.js')
+                    .then((registration) => {
+                        console.log('Service Worker registered with scope:', registration.scope);
+                    })
+                    .catch((error) => {
+                        console.error('Service Worker registration failed:', error);
+                    });
+            });
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h3>List of items</h3>
+        </div>
+<section>
+        <div class="item-form">
+             <form class="form" id="form">
+                <label>
+                    Item Name hellllll:
+                    <input type="text" class="item-name" required>
+                </label>
+                <label>
+                    Item Quantity:
+                    <input type="number" class="item-quantity" value="1" required>
+                </label>
+                <label>
+                    Item Price:
+                    <input type="number" class="item-price" placeholder="$!" required>
+                </label>
+                <button type="submit" class="submit-btn">Submit</button>
+                <!-- <button class="clear-all" type="button">Clear All</button> -->
+
+             </form>
+        </div>
+
+        
+            <div class="edit-form-container">
+                <form class="formToEdit">
+                        <input type="text" class="edit-item-name" placeholder="Item Name">
+                        <input type="number" class="edit-item-quantity" value="1" required placeholder="Quantity">
+                        <input type="number" class="edit-item-price" placeholder="$!" required>
+                    <button type="submit" class="submit-btn">Update Item</button>
+                    <button type="button" class="cancel-edit">Cancel</button>
+                </form>
+            </div>
+
+            <div class="delete-all-alert">
+                
+            </div>
+
+            <div class="items"></div>
+
+            <div class="hide">
+                <Button class="display-items">Show Items</Buttton>
+                <button class="hide-items">Hide-items</button>
+            </div>
+    
+    
+            <div class="total-price">
+                <p class="total"></p>
+                <button class="clear-all" type="button">Clear All</button>
+            </div>
+
+        
+</section>
+    </div>
+    <script src="index.js"></script>
+				
+</body>
+</html>

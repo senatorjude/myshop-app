@@ -1,0 +1,308 @@
+*{
+    margin: 0;
+    padding: 0;
+
+}
+body{
+    background-color: rgb(2, 2, 32);
+    color:white
+}
+.header{
+    height:40px;
+    background-color: rgb(3, 3, 105);
+    text-align: center;
+    color:white;
+    padding:5px
+
+}
+.container{
+    display:block
+}
+.container .item-form form input{
+    display:block;
+    margin-top: 15px;
+}
+.submit-btn{
+    background-color: rgb(3, 3, 105);
+    color:white;
+    padding:2px;
+    border-radius: 5px;
+    margin-top: 15px;
+}
+.items{
+    width:50%;
+    /* background-color: blueviolet; */
+    margin-top: 25px;
+    margin-left: 50px;
+    height:330px;
+    overflow:scroll;
+}
+.item-container{
+    display:flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    width:80%;
+    margin-right: 100px;
+    margin-top: 10px;
+    color:white;
+    height:fit-content;
+    border:2px solid rgb(3, 3, 105);
+}
+.btn-con{
+    /* background-color: black; */
+    height: 50px;
+    margin: 0;
+}
+.edit-btn{
+    display: inline;
+    height:100%;
+    margin: 0;
+}
+.check-con{
+    width:fit-content;
+    height:fit-content;
+
+}
+.edit-btn, .cancel{
+    border: none;
+}
+.checkbox{
+    width:100%;
+    margin-right: 0;
+    height: 100%;
+}
+.cancel{
+    display: inline;
+    height:100%;
+    width:30px;
+    background-color: red;
+    margin: 0;
+    /* margin-left: 0; */
+}
+.pcont{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+    background-color: rgb(2, 2, 32);
+    /* margin-left: 100px; */
+}
+.isPurChased{
+    background-color: rgb(3, 3, 105);
+    text-decoration: line-through;
+    
+}
+
+.edit{
+    display:block
+}
+.edit-form-container{
+    display: none;
+    position:absolute;
+    width: 200px;
+    right:50%;
+    left:35%;
+    top:35%;
+    background-color: rgb(3, 3, 105);
+    padding:10px;
+    border-radius: 5px;
+    
+    
+}
+.edit-form-container > form {
+    position: relative;
+    color: white;
+    right: 0px;
+    left: 0px;
+    top: 10px;
+}
+.formToEdit > input{
+    margin-left: 30px;
+    margin-top:20px;
+}
+#what-to-edit{
+    color:white;
+}
+#what-to-edit > h3{
+    font-size: small;
+    padding-left: 20px;
+    margin-top: 6px;
+}
+#what-to-edit > ul {
+    padding-left:40px ;
+    list-style-type: none;
+    margin-top: 10px;
+}
+#what-to-edit > ul > li {
+    margin-top: 5px;
+}
+#all> li > button {
+    border: none;
+}
+#what-to-edit > ul > li > button:hover{
+    border: none;
+    background-color:rgb(3, 3, 105) ;
+}
+.cancel-edit, .submit-btn{
+    margin-left: 30px;
+}
+.cancel-edit{
+    background-color: red;
+    border: none;
+    border-radius: 5px;
+}
+.item-form{
+    border-right: 1px solid grey;
+}
+.total-price{
+    top:50px;
+    right:0;
+    bottom:0;
+    border-left: 1px solid grey;
+    padding:5px;
+    font-weight: bolder;
+}
+.edit-btn{
+    display: inline-block;
+    background-color:rgb(3, 3, 105) ;
+    color:white;
+
+}
+section{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items:center;
+    margin-left: 20px;
+    margin-left: 20px;
+}
+.hide-items{
+    display: none;
+}
+.hide{
+    display:none;
+}
+.clear-all{
+    background-color: rgb(126, 7, 7);
+    color: white;
+}
+.delete-all-alert{
+    display: none;
+    position:relative;
+    left:20%;
+    right:300%;
+    width:200px;
+    height: 200px;
+    text-align: center;
+    background-color:rgb(3, 3, 105) ;
+    border-radius: 6px;
+
+    
+}
+.delete-item{
+    position:absolute;
+    top:30px;
+    top:50px
+}
+.delete-item > button{
+    margin-top: 50px;
+    width:50px;
+    border: none;
+    border-radius: 5px;
+    color:white
+}
+.no-btn{
+    background-color: red;
+}
+.yesBtn{
+    background-color:rgb(13, 13, 163) ;
+
+}
+
+
+
+@media screen and (max-width:500px){
+    section{
+        display: flex;
+        flex-direction: column;
+    }
+    .items{
+        display:none;
+        width:100%;
+        height: 300px;
+        margin-top: 0;
+        transition: 1s;
+        
+    }
+    .hide{
+        display:block;
+        margin-top: 10px;
+    }
+    .hide > button{
+        background-color: rgb(3, 3, 105);
+        color:white;
+        font-size:smaller;
+        border:none;
+        border-radius: 5px;
+    }
+    .item-form{
+        margin-top: 40px;
+        border-right: none;
+    }
+    .edit-form-container{
+     position:fixed;
+     left:45px;
+     top:100px
+    }
+    .delete-all-alert{
+        position:fixed;
+        left: 70px;
+        top:100px
+    }
+    .total-price{
+        display: none
+    }
+}
+
+@media screen  and (min-width:991px) {
+    body{
+        background-color: red;
+    }
+    section{
+        display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items:center;
+    margin-left: 20px;
+    margin-left: 20px;
+    }
+    .item-form{
+        display:block
+    }
+    .total-price{
+        display:block
+    }
+    .items{
+        display: block;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
